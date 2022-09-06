@@ -23,7 +23,7 @@ use Yii;
  * @property PhoneNumber[] $phoneNumbers
  * @property Trip[] $trips
  */
-class User extends \yii\db\ActiveRecord
+class User extends \yii\db\ActiveRecord 
 {
     /**
      * {@inheritdoc}
