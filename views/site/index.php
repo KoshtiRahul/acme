@@ -1,13 +1,19 @@
 <?php
+use yii\bootstrap\Dropdown;
 
 /** @var yii\web\View $this */
 
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
-
+<div class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Language <b class="caret"></b></a>
+    <?php
+        echo \app\components\LanguageDropdown::widget();
+    ?>
+</div>
     <div class="jumbotron text-center bg-transparent">
-        <h1 class="display-4">Congratulations!</h1>
+        <h1 class="display-4"><?= Yii::t('app','congratulation')?></h1>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 

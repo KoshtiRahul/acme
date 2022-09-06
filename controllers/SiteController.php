@@ -60,7 +60,8 @@ class SiteController extends Controller
      * @return string
      */
     public function actionIndex()
-    {
+    {   
+        // Yii::$app->language = 'de-DE';
         return $this->render('index');
     }
 
