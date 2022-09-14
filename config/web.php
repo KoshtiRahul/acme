@@ -18,13 +18,13 @@ $config = [
                 'google' => [
                     'class' => 'yii\authclient\clients\Google',
                     'clientId' => '29946445306-i2r1lqnajtt7ismpjahdeq4bua0jtd44.apps.googleusercontent.com',
-                    'clientSecret' => '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',
+                    'clientSecret' => '',
                     'returnUrl' => 'http://localhost:8080/index.php/en/site/auth?authclient=google',
                 ],
                 'facebook' => [
                     'class' => 'yii\authclient\clients\Facebook',
                     'clientId' => '332940212324780',
-                    'clientSecret' => 'f6dfe7a729c635c7958572cf9548cb8b',
+                    'clientSecret' => '',
                 ],
                 'twitter' => [
                     'class' => 'yii\authclient\clients\Twitter',
@@ -32,7 +32,7 @@ $config = [
                         'include_email' => 'true'
                     ],
                     'consumerKey' => '6H3F8XFBLGRggAJxiSi27ECJY',
-                    'consumerSecret' => 'Boyo1vgVoER0zSaJUdhzx4BHFkw0npckjcjr7rDJLCQHVVSZD9',
+                    'consumerSecret' => '',
                 ],
     
                 // etc.
@@ -61,8 +61,8 @@ $config = [
             'transport' => [
                 'scheme' => 'smtp',
                 'host' => 'smtp.gmail.com', 
-                'username' => 'rhlkoshti@gmail.com',
-                'password' => 'imylyqjetlqmcena',
+                'username' => '',
+                'password' => '',
                 'port' => '465',
                 'options' => ['ssl' => true],
             ]
