@@ -7,11 +7,13 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'yii\\symfonymailer\\' => array($vendorDir . '/yiisoft/yii2-symfonymailer/src'),
+    'yii\\httpclient\\' => array($vendorDir . '/yiisoft/yii2-httpclient/src'),
     'yii\\gii\\' => array($vendorDir . '/yiisoft/yii2-gii/src'),
     'yii\\faker\\' => array($vendorDir . '/yiisoft/yii2-faker/src'),
     'yii\\debug\\' => array($vendorDir . '/yiisoft/yii2-debug/src'),
     'yii\\composer\\' => array($vendorDir . '/yiisoft/yii2-composer'),
     'yii\\bootstrap5\\' => array($vendorDir . '/yiisoft/yii2-bootstrap5/src'),
+    'yii\\authclient\\' => array($vendorDir . '/yiisoft/yii2-authclient/src'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
     'codemix\\localeurls\\' => array($vendorDir . '/codemix/yii2-localeurls'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
