@@ -29,11 +29,13 @@ class ComposerStaticInit371b77f03dffc89dc1371149d92ab99a
         'y' => 
         array (
             'yii\\symfonymailer\\' => 18,
+            'yii\\httpclient\\' => 15,
             'yii\\gii\\' => 8,
             'yii\\faker\\' => 10,
             'yii\\debug\\' => 10,
             'yii\\composer\\' => 13,
             'yii\\bootstrap5\\' => 15,
+            'yii\\authclient\\' => 15,
             'yii\\' => 4,
         ),
         'c' => 
@@ -106,6 +108,10 @@ class ComposerStaticInit371b77f03dffc89dc1371149d92ab99a
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-symfonymailer/src',
         ),
+        'yii\\httpclient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-httpclient/src',
+        ),
         'yii\\gii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-gii/src',
@@ -125,6 +131,10 @@ class ComposerStaticInit371b77f03dffc89dc1371149d92ab99a
         'yii\\bootstrap5\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-bootstrap5/src',
+        ),
+        'yii\\authclient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-authclient/src',
         ),
         'yii\\' => 
         array (

@@ -8,7 +8,7 @@ use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
 
 $this->title = 'Login';
-$this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="site-login">
     <h1><?= Html::encode($this->title) ?></h1>
@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 
-        <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+        <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
 
         <?= $form->field($model, 'password')->passwordInput() ?>
 
@@ -37,13 +37,20 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="form-group">
             <div class="offset-lg-1 col-lg-11">
                 <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                <?= yii\authclient\widgets\AuthChoice::widget([
+                'baseAuthUrl' => ['site/auth'],
+                'popupMode' => false,
+                'options' => [
+                'class' => 'auth-clients-holder']
+                ]) ?>
             </div>
         </div>
 
     <?php ActiveForm::end(); ?>
 
     <div class="offset-lg-1" style="color:#999;">
-        You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
-        To modify the username/password, please check out the code <code>app\models\User::$users</code>.
+    <?= Yii::t('app', 'If no account you can {register}', [
+            'register' => Html::a(Yii::t('app', 'register'), ['/site/register'])
+        ]) ?>
     </div>
 </div>

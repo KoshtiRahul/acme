@@ -1,7 +1,9 @@
 <?php
-return[
-    'congratulation'=>'Glückwünsche!'
+
+return [
+    'congratulations' => 'Glueckwunsch!',
+    'Home' => 'Home',
+    'About' => 'Ueber uns',
+    'Contact' => 'Kontakt',
+    'Login' => 'Anmelden'
 ];
-
-
-?>

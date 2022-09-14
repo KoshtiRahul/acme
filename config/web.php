@@ -12,9 +12,36 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection',
+            'clients' => [
+                'google' => [
+                    'class' => 'yii\authclient\clients\Google',
+                    'clientId' => '29946445306-i2r1lqnajtt7ismpjahdeq4bua0jtd44.apps.googleusercontent.com',
+                    'clientSecret' => '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',
+                    'returnUrl' => 'http://localhost:8080/index.php/en/site/auth?authclient=google',
+                ],
+                'facebook' => [
+                    'class' => 'yii\authclient\clients\Facebook',
+                    'clientId' => '332940212324780',
+                    'clientSecret' => 'f6dfe7a729c635c7958572cf9548cb8b',
+                ],
+                'twitter' => [
+                    'class' => 'yii\authclient\clients\Twitter',
+                    'attributeParams' => [
+                        'include_email' => 'true'
+                    ],
+                    'consumerKey' => '6H3F8XFBLGRggAJxiSi27ECJY',
+                    'consumerSecret' => 'Boyo1vgVoER0zSaJUdhzx4BHFkw0npckjcjr7rDJLCQHVVSZD9',
+                ],
+    
+                // etc.
+            ],
+        ],
+
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'Yi9YoTHL_cuvmz-GjOrNEq50fj-xF3B1',
+            'cookieValidationKey' => 'hYNAYpXqhE1enQPSpyhSqexNVMIR1_AO',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -30,7 +57,16 @@ $config = [
             'class' => \yii\symfonymailer\Mailer::class,
             'viewPath' => '@app/mail',
             // send all mails to a file by default.
-            'useFileTransport' => true,
+            'useFileTransport' => false,
+            'transport' => [
+                'scheme' => 'smtp',
+                'host' => 'smtp.gmail.com', 
+                'username' => 'rhlkoshti@gmail.com',
+                'password' => 'imylyqjetlqmcena',
+                'port' => '465',
+                'options' => ['ssl' => true],
+            ]
+
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -46,8 +82,6 @@ $config = [
             'translations' => [
                 'app*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
-                    //'basePath' => '@app/messages',
-                    //'sourceLanguage' => 'en-US',
                     'fileMap' => [
                         'app' => 'app.php'
                     ],
@@ -56,10 +90,9 @@ $config = [
         ],
         'urlManager' => [
             'class' => 'codemix\localeurls\UrlManager',
+            'languages' => ['en', 'de', 'ru'],
+            'enablePrettyUrl' => true,
 
-            // List all supported languages here
-            // Make sure, you include your app's default language.
-            'languages' => ['en','de','ru'],
         ]
         /*
         'urlManager' => [
